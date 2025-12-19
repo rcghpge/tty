@@ -1,5 +1,4 @@
 # Exclude 
-*
 *.zst
 pkg/
 src/
