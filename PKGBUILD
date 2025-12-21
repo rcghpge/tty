@@ -12,7 +12,7 @@ depends=(
   'qt6-wayland' 'layer-shell-qt' 'xorg-xwayland' 'konsole' 'lynx'
   'pipewire' 'pipewire-alsa' 'pipewire-pulse' 'pipewire-audio'
   'wireplumber' 'plasma-pa' 'sof-firmware' 'spectacle' 'gwenview'
-  'kinfocenter'
+  'kinfocenter' 'bluez' 'bluez-utils'
 )
 optdepends=(
   'plasma-integration: Qt application integration'
