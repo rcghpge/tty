@@ -34,6 +34,7 @@ package() {
 
 post_install() {
   systemctl enable sddm.service
+  systemctl enable bluetooth.service
   
   cat << EOF
 
