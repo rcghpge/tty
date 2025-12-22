@@ -6,8 +6,8 @@ LnOS Arch Edition `tty` desktop environment essentials
 
 Example usage:
 ```bash
-git clone https://github.com/rcghpge/pkgbuild.git
-cd pkgbuild
+git clone https://github.com/rcghpge/tty.git
+cd tty
 makepkg -si
 
 # For web browser recommend install librewolf with yay or install your preferred web browser
