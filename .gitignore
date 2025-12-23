@@ -1,5 +1,6 @@
 # Exclude 
-*.zst
+*.pkg.tar.*
+*.SRCINFO
 pkg/
 src/
 
