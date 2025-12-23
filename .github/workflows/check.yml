@@ -1,8 +1,6 @@
 ---
 name: PKGBUILD Check
-on:
-  push: true
-  pull_request: true
+on: [push, pull_request]
 
 jobs:
   verify:
@@ -16,7 +14,7 @@ jobs:
           pacman -Syu --noconfirm
           pacman -S --noconfirm base-devel devtools pacman-contrib sudo git make
 
-      - name: Create build user
+      - name: Generate build user
         run: |
           useradd -m -G wheel builder
           echo "builder ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/builder
