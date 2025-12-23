@@ -1,5 +1,4 @@
 # .github/workflows/check.yml
-# .github/workflows/check.yml
 name: PKGBUILD Check
 on: [push, pull_request]
 
@@ -24,21 +23,21 @@ jobs:
     - name: Generate Makefile for build pipeline test
       run: |
         cat > Makefile << 'EOF'
-.PHONY: verify srcinfo test-all clean
+        .PHONY: verify srcinfo test-all clean
 
-verify:
-	find . -name PKGBUILD -execdir bash -c 'updpkgsums && makepkg --verifysource --nobuild' \; || (echo "Verification FAILED"; exit 1)
+        verify:
+		find . -name PKGBUILD -execdir bash -c 'updpkgsums && makepkg --verifysource --nobuild' \; || (echo "Verification FAILED"; exit 1)
 
-srcinfo:
-	find . -name PKGBUILD -execdir makepkg --printsrcinfo > .SRCINFO \;
+	srcinfo:
+		find . -name PKGBUILD -execdir makepkg --printsrcinfo > .SRCINFO \;
 
-test-all: verify srcinfo
-	@echo "✓ All tests passed"
+	test-all: verify srcinfo
+		@echo "✓ All tests passed"
 
-clean:
-	rm -f .SRCINFO *.pkg.tar.*
-EOF
-        chown builder:builder Makefile
+	clean:
+		rm -f .SRCINFO *.pkg.tar.*
+	EOF
+        	chown builder:builder Makefile
 
     - name: Update checksums and validate
       run: |
