@@ -9,12 +9,12 @@ license=('Apache-2.0')
 depends=(
   'btop' 'tldr' 'fastfetch' 'bash' 'emacs' 'vim' 'neovim' 'texinfo'
   'plasma-desktop' 'plasma-wayland-protocols' 'kwin' 'sddm' 'sddm-kcm' 
-  'qt6-wayland' 'layer-shell-qt' 'xorg-xwayland' 'konsole' 'lynx'
-  'pipewire' 'pipewire-alsa' 'pipewire-pulse' 'pipewire-audio'
+  'qt6-wayland' 'layer-shell-qt' 'xorg-xwayland' 'konsole' 'lynx' 'glycin'
+  'pipewire' 'pipewire-alsa' 'alsa-utils' 'pipewire-pulse' 'pipewire-audio'
   'wireplumber' 'plasma-pa' 'sof-firmware' 'spectacle' 'gwenview'
   'kinfocenter' 'bluez' 'bluez-utils' 'bluedevil' 'bat' 'kscreen'
-  'glycin' 'bubblewrap-suid' 'xdg-desktop-portal-kde' 'qemu'
-  'virt-manager' 'libvirt' 'dnsmasq' 'ebtables' 'iptables-nft'
+  'bubblewrap-suid' 'xdg-desktop-portal-kde' 'qemu' 'libvirt'
+  'virt-manager' 'dnsmasq' 'ebtables' 'iptables-nft'
 )
 optdepends=(
   'plasma-integration: Qt application integration'
